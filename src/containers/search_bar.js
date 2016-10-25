@@ -17,9 +17,13 @@ export default class SearchBar extends Component {
         });
     }
 
+    onFormSubmit(e) {
+        e.preventDefault();
+    }
+
     render() {
         return (
-            <form className="input-group">
+            <form onSubmit={this.onFormSubmit} className="input-group">
                 <input
                     placeholder="Get a weather in you city"
                     className="form-control"
